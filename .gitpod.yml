@@ -2,7 +2,12 @@ tasks:
   - init: |
       python -m pip install --upgrade pip
       python -m pip install Django
+      pip install -r requirements.txt
       python manage.py migrate
+    before: |
+      echo 'alias dj="python manage.py"' >> ~/.bashrc
+      source ~/.bashrc
+      source env/env.sh
     command: |
       python manage.py runserver
   

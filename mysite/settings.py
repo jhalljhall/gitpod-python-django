@@ -83,15 +83,26 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['RDS_DB_NAME'],
-        'USER': os.environ['RDS_USERNAME'],
-        'PASSWORD': os.environ['RDS_PASSWORD'],
-        'HOST': os.environ['RDS_HOSTNAME'],
-        'CONN_MAX_AGE': None,
-        'OPTIONS': {'sslmode': 'require'},
-        "ATOMIC_REQUESTS": True,  # default is True, just being explicit
-    },
+        'NAME': 'beiwei_dev',
+        'USER': 'postgres',
+        'PASSWORD': 'myheadhurts',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'beiwei-dev',
+#         'USER': 'postgres',
+#         'PASSWORD': 'fKe24o7AwvtA9ym7',
+#         'HOST': '34.139.123.81',
+#         'PORT': '5432',
+#         'CONN_MAX_AGE': None,
+#         "ATOMIC_REQUESTS": True,  # default is True, just being explicit
+#     },
+# }
 
 
 # Password validation
